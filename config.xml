@@ -3,11 +3,11 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.phonegap.xpressit"
         versionCode = "17" 
-        version     = "1.0.0" >
+        version     = "17.0.0" >
 
     <!-- versionCode is optional and Android only -->
 
-    <name>IHNBC Online</name>
+    <name>com.phonegap.xpressit</name>
 
     <description>
         IN HIS NAME BIBLE CHURCH
