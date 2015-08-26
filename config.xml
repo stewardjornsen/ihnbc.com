@@ -2,15 +2,15 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.phonegap.xpressit"
-        versionCode = "20" 
-        version     = "17.0.3" >
+        versionCode = "21" 
+        version     = "17.0.4" >
 
     <!-- versionCode is optional and Android only -->
 
     <name>IHNBC</name>
 
     <description>
-        IN HIS NAME BIBLE CHURCH
+        IHNBC is app that provides you a platform to follow the ministry and teachings of Steward Godwin Jornsen, the senior pastor of IN HIS NAME BIBLE CHURCH. Using this app, you can access teaching articles, watch videos and even listen to audio messages to build your Christian life and encourage your faith.
     </description>
 
     <author href="https://ihnbc.com" email="stewardjornsen@gmail.com">
