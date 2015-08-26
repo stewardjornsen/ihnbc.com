@@ -12,6 +12,7 @@
 body, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
 	background-image: url(../images/bg.jpg);
 	background-position: center top;
+	background-color: #ac2d42;
 }
 .video-container {
     position: relative;
@@ -27,4 +28,19 @@ body, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
     left: 0;
     width: 100%;
     height: 100%;
+}
+.gallery_out{
+	margin: 10px;
+}
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+    background-color: #000000;
+    border-color: #8c7172;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #eeeeee;
+}
+.ui-page-theme-d .ui-btn, html .ui-bar-d .ui-btn, html .ui-body-d .ui-btn, html body .ui-group-theme-d .ui-btn, html head + body .ui-btn.ui-btn-d, .ui-page-theme-d .ui-btn:visited, html .ui-bar-d .ui-btn:visited, html .ui-body-d .ui-btn:visited, html body .ui-group-theme-d .ui-btn:visited, html head + body .ui-btn.ui-btn-d:visited {
+    background-color: #383838;
+    border-color: #6F6A6A;
+    color: #F3EFEF;
+    text-shadow: 0 1px 0 #000000;
 }

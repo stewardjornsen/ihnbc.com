@@ -12,50 +12,56 @@
 <link href="assets/jquery.mobile.custom/jquery.mobile.custom.structure.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="assets/font-awesome-4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="assets/style.css">
 <link href="assets/stewardxpress.css" rel="stylesheet">
 <script src="assets/jquery.mobile.custom/jquery-2.1.4.min.js"></script>
 <script src="assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 <script src="assets/jquery.mobile.custom/jquery.mobile.custom.min.js"></script>
-<script src="assets/jquery.mobile.custom/jquery.mobile.custom.structure.min.js"></script>
 <script src="assets/slick/slick.min.js"></script>
 <script src="assets/codiqa.ext.js"></script>
 <script src="assets/script.js"></script>
 </head>
 <body>
 <div data-role="page" data-control-title="Home" id="home">
-  <div data-role="panel" id="sidemenu"> 
+  <div data-role="panel" id="sidemenu_original" class="sidemenu"> 
     <!-- panel content goes here -->
+
     <ul data-role="listview" data-inset="false" data-theme="a">
-      <li><a href="#"><i class="fa fa-newspaper-o fa-lg"></i> &nbsp; Read Articles</a></li>
-      <li><a href="#"><i class="fa fa-file-movie-o fa-lg"></i> &nbsp; Watch &amp; Listen Now</a></li>
-      <li><a href="#"><i class="fa fa-download fa-lg"></i> &nbsp; Downloads</a></li>
-      <li><a href="#"><i class="fa fa-camera-retro fa-lg"></i> &nbsp; Photo Gallery</a></li>
-      <li><a href="#contact_page"><i class="fa fa-envelope-o  fa-lg"></i> &nbsp; Contacts</a></li>
-      <li><a href="#"><i class="fa  fa-money  fa-lg"></i> &nbsp; Make a Donation</a></li>
+    <li><a href="#home" data-transition="flip"><i class="fa fa-home fa-lg"></i> &nbsp; Home</a></li>
+     <li><a href="#" data-transition="flip"><i class="fa fa-newspaper-o fa-lg"></i> &nbsp; Read Articles</a></li>
+      <li><a href="#media_page" data-transition="flip"><i class="fa fa-file-movie-o fa-lg"></i> &nbsp; Watch &amp; Listen Now</a></li>
+      <li><a href="#" data-transition="flip"><i class="fa fa-calendar fa-lg"></i> &nbsp; Events</a></li>
+      <li><a href="#" data-transition="flip"><i class="fa fa-download fa-lg"></i> &nbsp; Downloads</a></li>
+      <li><a href="#photo_page" data-transition="flip"><i class="fa fa-camera-retro fa-lg"></i> &nbsp; Photo Gallery</a></li>
+      <li><a href="#contact_page" data-transition="flip"><i class="fa fa-envelope-o  fa-lg"></i> &nbsp; Contacts</a></li>
+      <li><a href="#" data-transition="flip"><i class="fa  fa-money  fa-lg"></i> &nbsp; Make a Donation</a></li>
+       <li><a href="http://ihnbc.com" data-transition="flip"><i class="fa fa-globe fa-lg"></i> &nbsp; IHNBC Website</a></li>
     </ul>
+
   </div>
   <!-- /panel -->
   
-  <div data-theme="a" data-role="header" data-position="fixed"> <a data-inline="true" href="#sidemenu" data-icon="home" data-iconpos="right" data-theme="d"
+  <div data-theme="a" data-role="header" data-position="fixed"> <a data-inline="true" href="#sidemenu_original" data-icon="home" data-iconpos="right" data-theme="d"
         class="ui-btn ui-btn-left ui-btn-icon-left" style="border:0; background-color:transparent; color:#fff;"><i class="fa fa-bars fa-lg"></i> </a> 
     <!--  <a data-rel="back" href="#page1"  data-iconpos="left"
         class="ui-btn ui-btn-right ui-btn-icon-right" style="border:0; background-color:transparent; color:#fff;"> <i class="fa fa-chevron-circle-left fa-lg"></i> </a>-->
     <h1 class="ui-title"> IHNBC </h1>
   </div>
   <div role="main" class="ui-content">
-    <h4 class="text-center">IN HIS NAME BIBLE CHURCH </h4>
+   <!-- <h4 class="text-center">IN HIS NAME BIBLE CHURCH </h4>-->
     <div 
         data-controltype="image" class="home-pix"> <img src="images/512px_hires_icon.jpg" class="img-responsive thumbnail"  alt="image"> </div>
     <br />
     <div data-controltype="textblock"> <i class="fa fa-quote-left fa-lg fa-pull-left fa-border"></i> Steward Godwin Jornsen is the Lead Pastor of In His Name Bible Church. </div>
     <hr/>
     <ul data-role="listview" data-inset="true" data-theme="d" style="font-size:0.9em">
+     
       <li><a href="#" data-transition="flip"><i class="fa fa-newspaper-o fa-lg"></i> &nbsp; Read Articles</a></li>
       <li><a href="#media_page" data-transition="flip"><i class="fa fa-file-movie-o fa-lg"></i> &nbsp; Watch &amp; Listen Now</a></li>
       <li><a href="#" data-transition="flip"><i class="fa fa-calendar fa-lg"></i> &nbsp; Events</a></li>
-        <li><a href="#" data-transition="flip"><i class="fa fa-download fa-lg"></i> &nbsp; Downloads</a></li>
-         <li><a href="#" data-transition="flip"><i class="fa fa-camera-retro fa-lg"></i> &nbsp; Photo Gallery</a></li>
+      <li><a href="#" data-transition="flip"><i class="fa fa-download fa-lg"></i> &nbsp; Downloads</a></li>
+      <li><a href="#photo_page" data-transition="flip"><i class="fa fa-camera-retro fa-lg"></i> &nbsp; Photo Gallery</a></li>
       <li><a href="#contact_page" data-transition="flip"><i class="fa fa-envelope-o  fa-lg"></i> &nbsp; Contacts</a></li>
       <li><a href="#" data-transition="flip"><i class="fa  fa-money  fa-lg"></i> &nbsp; Make a Donation</a></li>
     </ul>
@@ -88,8 +94,8 @@
   </div>--> 
 </div>
 <div data-role="page" data-control-title="Video" id="media_page">
-  
-  
+ <div data-role="panel" id="sidemenu_video" class="sidemenu_clone"> 
+ </div>
   <div data-role="panel" id="videolist" data-position="right" data-display="overlay"> 
     <!-- panel content goes here -->
     <ul data-role="listview" data-inset="false" data-theme="a">
@@ -103,10 +109,10 @@
   </div>
   <!-- /panel -->
   
-  <div data-theme="a" data-role="header" data-position="fixed"> <a data-inline="true" href="#sidemenu" data-icon="home" data-iconpos="right" data-theme="d"
-        class="ui-btn ui-btn-left ui-btn-icon-left" style="border:0; background-color:transparent; color:#fff;"><i class="fa fa-bars fa-lg"></i> </a> <a data-rel="back" href="#page1"  data-iconpos="left"
-        class="ui-btn ui-btn-right ui-btn-icon-right" style="border:0; background-color:transparent; color:#fff;"> <i class="fa fa-chevron-circle-left fa-lg"></i> </a>
-    <h1 class="ui-title"> IHNBC </h1>
+  <div data-theme="a" data-role="header" data-position="fixed"> <a data-inline="true" href="#sidemenu_video" data-icon="home" data-iconpos="right" data-theme="d"
+        class="ui-btn ui-btn-right ui-btn-icon-right" style="border:0; background-color:transparent; color:#fff;"><i class="fa fa-bars fa-lg"></i> </a> <a data-rel="back" href="#page1"  data-iconpos="left"
+        class="ui-btn ui-btn-left ui-btn-icon-left" style="border:0; background-color:transparent; color:#fff;"> <i class="fa fa-chevron-left fa-lg"></i> </a>
+    <h1 class="ui-title"> IHNBC VIDEOS </h1>
   </div>
   <div role="main" class="ui-content">
     <div class="video-container">
@@ -124,30 +130,21 @@
       </div>
       <!-- /navbar -->
       <hr />
-      
-      <div class="text-center">
-      <span class="" style="">
-      <a href="#" style="color: #fff; text-decoration:none;" class=""><i class="text-center fa fa-youtube fa-3x" style=""></i><br />VIEW MORE</a>
-      </span>
-      </div>
-      
-      
-      
+      <div class="text-center"> <span class="" style=""> <a href="#" style="color: #fff; text-decoration:none;" class=""><i class="text-center fa fa-youtube fa-3x" style=""></i><br />
+        VIEW MORE</a> </span> </div>
     </div>
   </div>
 </div>
 <div data-role="page" data-control-title="Contact" id="contact_page">
-
-
-<div data-theme="a" data-role="header" data-position="fixed"> <a data-inline="true" href="#sidemenu" data-icon="home" data-iconpos="right" data-theme="d"
+ <div data-role="panel" id="sidemenu_contact" class="sidemenu_clone"> 
+ </div>
+  <div data-theme="a" data-role="header" data-position="fixed"> <a data-inline="true" href="#sidemenu_contact" data-icon="home" data-iconpos="right" data-theme="d"
    data-transition="slide"      class="ui-btn ui-btn-right ui-btn-icon-right" style="border:0; background-color:transparent; color:#fff;"><i class="fa fa-bars fa-lg"></i> </a> <a data-rel="back" href="#page1"  data-iconpos="left"
         class="ui-btn ui-btn-left ui-btn-icon-left" style="border:0; background-color:transparent; color:#fff;"> <i class="fa fa-chevron-left fa-lg"></i> </a>
-    <h1 class="ui-title"> IHNBC </h1>
+    <h1 class="ui-title"> CONTACT US </h1>
   </div>
-  
-  
   <div role="main" class="ui-content">
-  <h3>Contact Us</h3>
+<!--    <h3>Contact Us</h3>-->
     <div id="googlemapsjs2" class="google-map video-container"> </div>
     <div></div>
     <script type="text/javascript">
@@ -179,19 +176,68 @@
 
             }
         });
-        </script> 
-        <div>
-        <hr />
-        <p><strong>IN HIS NAME BIBLE CHURCH </strong><br>
-          17 Ohiamini Street, <br>
-          Off Rumuola Road (SBS/RivCas)<br>
-          Omoi-Orosi, Port Harcourt.
-        </p>
-        <p><strong>CHURCH SERVICES:</strong></p>
-        <p>Sunday: 8am - 11am<br>
-          Wednesday: 5pm - 8pm</p>
-        </div>
+        </script>
+    <div>
+      <hr />
+      <p><strong>IN HIS NAME BIBLE CHURCH </strong><br>
+        17 Ohiamini Street, <br>
+        Off Rumuola Road (SBS/RivCas)<br>
+        Omoi-Orosi, Port Harcourt. </p>
+      <p><strong>CHURCH SERVICES:</strong></p>
+      <p>Sunday: 8am - 11am<br>
+        Wednesday: 5pm - 8pm</p>
+    </div>
   </div>
 </div>
+<div data-role="page" data-control-title="Photo" id="photo_page">
+ <div data-role="panel" id="sidemenu_photo" class="sidemenu_clone"> 
+ </div>
+  <div data-theme="a" data-role="header" data-position="fixed"> <a data-inline="true" href="#sidemenu_photo" data-icon="home" data-iconpos="right" data-theme="d"
+   data-transition="slide"      class="ui-btn ui-btn-right ui-btn-icon-right" style="border:0; background-color:transparent; color:#fff;"><i class="fa fa-bars fa-lg"></i> </a> <a data-rel="back" href="#page1"  data-iconpos="left"
+        class="ui-btn ui-btn-left ui-btn-icon-left" style="border:0; background-color:transparent; color:#fff;"> <i class="fa fa-chevron-left fa-lg"></i> </a>
+    <h1 class="ui-title"> PHOTO GALLERY </h1>
+  </div>
+  <div role="main" class="ui-content">
+ <!--   <h3>Contact Us</h3>-->
+    <div class="gallery_out">
+      <div class="gallery">
+        <div><img src="images/512px_hires_icon.jpg" class="img-responsive" alt="Slide 1" width="512" height="512"></div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script language="javascript" type="text/javascript">
+$(document).ready(function(e) {
+    $('.gallery').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+$('.sidemenu_clone').html(
+'<ul data-role="listview" data-inset="false" data-theme="a">'+
+$('#sidemenu_original').find('ul').html()
++'</ul>');
+// Load the xml file using ajax 
+$.ajax({
+    type: "GET",
+    url: "https://www.youtube.com/feeds/videos.xml?playlist_id=PL4HaMRVB8id5GkiOyie4q4N2SQMCyRx_v",
+    dataType: "xml",
+    success: function (xml) {
+
+        // Parse the xml file and get data
+        var xmlDoc = $.parseXML(xml),
+            $xml = $(xmlDoc);
+        $xml.find('entry').each(function () {
+			console.log($this);
+            //$("#news-container").append($(this).text() + "<br />");
+        });
+    }
+});				
+});
+</script>
 </body>
 </html>
