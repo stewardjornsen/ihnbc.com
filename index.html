@@ -98,14 +98,9 @@
  </div>
   <div data-role="panel" id="videolist" data-position="right" data-display="overlay"> 
     <!-- panel content goes here -->
-    <ul data-role="listview" data-inset="false" data-theme="a">
-      <li><a href="#"><i class="fa fa-newspaper-o fa-lg"></i> &nbsp; Read Articles</a></li>
-      <li><a href="#"><i class="fa fa-file-movie-o fa-lg"></i> &nbsp; Watch &amp; Listen Now</a></li>
-      <li><a href="#"><i class="fa fa-download fa-lg"></i> &nbsp; Downloads</a></li>
-      <li><a href="#"><i class="fa fa-camera-retro fa-lg"></i> &nbsp; Photo Gallery</a></li>
-      <li><a href="#"><i class="fa fa-envelope-o  fa-lg"></i> &nbsp; Contacts</a></li>
-      <li><a href="#"><i class="fa  fa-money  fa-lg"></i> &nbsp; Make a Donation</a></li>
-    </ul>
+     <ul data-role="listview" data-inset="true" data-theme="a" id="vidpanel">
+  
+  </ul>
   </div>
   <!-- /panel -->
   
@@ -115,20 +110,31 @@
     <h1 class="ui-title"> IHNBC VIDEOS </h1>
   </div>
   <div role="main" class="ui-content">
-    <div class="video-container">
+  <div class="video-container">
       <iframe data-controltype="youtube" id="youtube1" type="text/html" width="288px"
         height="216px" src="https://www.youtube.com/embed/0-fnG93zNU0" frameborder="0"> </iframe>
-    </div>
+    </div> 
+    <div id="ytube">
+
+
+  
+  </div>
+   
     <div>
       <hr />
       <div data-role="navbar">     
         <ul>
           <li><a href="#home" data-transition="flip"><i class="text-center fa fa-home fa-3x" style="display:block;"></i>HOME</a></li>
           <li><a href="#"><i class="text-center fa fa-music fa-3x" style="display:block;"></i>AUDIO</a></li>
-          <li><a href="#videolist"><i class="text-center fa fa-list fa-3x" style="display:block;"></i>VIDEO LIST</a></li>
+          <li><a href="#videolist" ><i class="text-center fa fa-list fa-3x" style="display:block;"></i>VIDEO LIST</a></li>
         </ul>
       </div>
       <!-- /navbar -->
+      <hr />
+      
+       <ul data-role="listview" data-inset="true" data-theme="a" id="vidlist">
+  
+  </ul>
       <hr />
       <div class="text-center"> <span class="" style=""> <a href="#" style="color: #fff; text-decoration:none;" class=""><i class="text-center fa fa-youtube fa-3x" style=""></i><br />
         VIEW MORE</a> </span> </div>
@@ -201,7 +207,7 @@
  <!--   <h3>Contact Us</h3>-->
     <div class="gallery_out">
       <div class="gallery">
-        <div><img src="images/512px_hires_icon.jpg" class="img-responsive" alt="Slide 1" width="512" height="512"></div>
+        <div><img src="images/512px_hires_icon.jpg" class="gallery_image" alt="Slide 1" width="512" height="512"></div>
         <div>2</div>
         <div>3</div>
       </div>
@@ -221,22 +227,54 @@ $('.sidemenu_clone').html(
 '<ul data-role="listview" data-inset="false" data-theme="a">'+
 $('#sidemenu_original').find('ul').html()
 +'</ul>');
-// Load the xml file using ajax 
-$.ajax({
-    type: "GET",
-    url: "https://www.youtube.com/feeds/videos.xml?playlist_id=PL4HaMRVB8id5GkiOyie4q4N2SQMCyRx_v",
-    dataType: "xml",
-    success: function (xml) {
+// Load the xml file using ajax 		
 
-        // Parse the xml file and get data
-        var xmlDoc = $.parseXML(xml),
-            $xml = $(xmlDoc);
-        $xml.find('entry').each(function () {
-			console.log($this);
-            //$("#news-container").append($(this).text() + "<br />");
-        });
-    }
-});				
+//var jqxhr = $.getJSON( 'http://localhost/ihnbc_mobile/assets/videos.php', 
+
+var jqxhr = $.getJSON( 'http://ihnbc.com/mobile/videos.php?&callback=?', 
+function(d) {
+ //console.log( d );
+})
+  .done(function(data) {
+   
+	var items = [];
+	var pane = [];
+  $.each( data.list, function( key, val ) {
+    items.push( "<li id='" + val.id + "'><a href='#' data-video_id='"+val.id+"'><img src='"+val.thumbnail+"' /><h3>" + val.title + "</h3><p>"+val.author+"</p></a></li>" );
+	   pane.push( "<li id='" + val.id + "' data-icon='false' ><a href='#' data-video_id='"+val.id+"'><p>" + val.title + "</p></a></li>" );
+	
+	//console.log( val.title );
+  });
+ $('#vidlist').append(items.join( "" )).listview('refresh')
+ .find('a').click(function(){
+	 $video_id = $(this).data('video_id');
+	 $('#youtube1').attr('src', 'https://www.youtube.com/embed/'+$video_id);
+	 //console.log($(this).data('video_id'));
+	 });
+$('#vidpanel').append(pane.join( "" )).listview('refresh')
+ .find('a').click(function(){
+	 $video_id = $(this).data('video_id');
+	 $('#youtube1').attr('src', 'https://www.youtube.com/embed/'+$video_id);
+	 //console.log($(this).data('video_id'));
+	 }); 
+	 
+/*  $( "<ul/>", {
+    "class": "my-new-list",
+	"data-role":"listview",
+	"data-inset":"false",
+	"data-theme":"a",
+    html: items.join( "" )
+  }).appendTo( "#ytube" );*/
+  })
+  .fail(function() {
+   // console.log( "error" );
+  })
+  .always(function() {
+   // console.log( "complete" );
+  });
+
+
+	
 });
 </script>
 </body>

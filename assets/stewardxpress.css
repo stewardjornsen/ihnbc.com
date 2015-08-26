@@ -32,6 +32,12 @@ body, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
 .gallery_out{
 	margin: 10px;
 }
+.gallery img, .gallery_image{
+ max-width:100%;
+ height: auto;
+ text-align:center;	
+ margin: auto;
+}
 .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
     background-color: #000000;
     border-color: #8c7172;
